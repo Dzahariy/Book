@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','Phudu', sans-serif;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    padding-top: 30px;
+    width: 350px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 25px;
+}
+
+nav ul li a{
+    font-size: 30px;
+    font-family: 'Phudu';
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover{
+    font-size: 35px;
+}
+
+.libra{
+    font-family: "Dosis";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 185px;
+    /*-webkit-text-stroke: 1px #fff ;*/
+    color: transparent;
+    background-image: linear-gradient(#E83C12, #361204);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -520px 0;
+    animation: backcolor 3s linear infinite alternate;
+}
+
+
+
+@keyframes backcolor {
+    100%{
+        background-position: 0 0;
+    }
+}
+
+
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background:none;
+    display: flex;
+    position: absolute;
+    top: 110px;
+    justify-content: center;
+   
+    
+}
+
+
+form{
+    background-color: #2F5B56;
+    width: 500px;
+    height: 55px;
+    display: flex;
+}
+
+form input{
+    flex:1;
+    border: none;
+    outline: none;
+}
+
+
+form button{
+    background:tomato;
+    padding: 7px 50px;
+    border: none;
+    outline: none;
+    color:#fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
