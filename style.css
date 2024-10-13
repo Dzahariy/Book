@@ -1,114 +1,172 @@
-*{
+/* Основные настройки */
+body {
     margin: 0;
-    padding: 0;
-    font-family: 'Poppins','Phudu', sans-serif;
-    box-sizing: border-box;
-}
-
-.main{
-    width: 100%;
-    height: 100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("img/bg.jpg");
-    background-size: cover;
-    background-position: center;
+    font-family: 'Roboto Slab', serif;
+    background-color: #f9f9f9; /* Светлый фон для контраста */
+    background: linear-gradient(135deg, #f9f9f9 30%, #e2e2e270%);
     position: relative;
+    overflow: hidden;
 }
 
+/* Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Ширина логотипа */
+    height: 80px; /* Высота логотипа */
+    background-color: #ff6347; /* Цвет фона логотипа */
+    color: white; /* Цвет текста */
+    border-radius: 50%; /* Круглая форма */
+    font-size: 24px; /* Размер шрифта */
+    font-family: 'Dosis', sans-serif; /* Шрифт для логотипа */
+    font-weight: 600; /* Жирность шрифта */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для логотипа */
+    margin-right: 20px; /* Отступ от других элементов */
+}
 
-
-nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 6%;
+/* Стиль навигации */
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
+    background-color: #333; /* Темный фон для навигации */
 }
 
-nav .logo{
-    padding-top: 30px;
-    width: 350px;
+nav .logo {
+    height: 50px;
 }
 
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 5px 25px;
-}
-
-nav ul li a{
-    font-size: 30px;
-    font-family: 'Phudu';
-    text-decoration: none;
-    color: #fff;
-}
-
-nav ul li a:hover{
-    font-size: 35px;
-}
-
-.libra{
-    font-family: "Dosis";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 185px;
-    /*-webkit-text-stroke: 1px #fff ;*/
-    color: transparent;
-    background-image: linear-gradient(#E83C12, #361204);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -520px 0;
-    animation: backcolor 3s linear infinite alternate;
-}
-
-
-
-@keyframes backcolor {
-    100%{
-        background-position: 0 0;
-    }
-}
-
-
-
-
-/*.container{
-    width: 100%;
-    height: 100vh;
-    background:none;
+nav form {
     display: flex;
-    position: absolute;
-    top: 110px;
-    justify-content: center;
-   
-    
-}*/
-
-
-form{
-    background-color: #2F5B56;
-    width: 500px;
-    height: 55px;
-    display: flex;
+    align-items: center;
 }
 
-form input{
-    flex:1;
+nav input[type="text"] {
+    padding: 10px;
     border: none;
-    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
-form button{
-    background:tomato;
-    padding: 7px 50px;
+nav button {
+    padding: 10px 15px;
     border: none;
-    outline: none;
-    color:#fff;
-    letter-spacing: 1px;
+    border-radius: 5px;
+    background-color: #ff6347; /* Цвет кнопки */
+    color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #e5533d; /* Цвет кнопки при наведении */
+}
+
+/* Стили для списка навигации */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Цвет ссылок при наведении */
+}
+
+/* Заголовок */
+.libra {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 20px; /* Уменьшен отступ сверху */
+    color: #333;
+    font-family: 'EB Garamond', serif; /* Используем другую гарнитуру для заголовка */
+}
+
+/* Контейнер для книг */
+.books-container {
+    position: relative;
+    padding: 20px; /* Отступ вокруг контейнера */
+    margin-top: 50px; /* Отступ снизу от заголовка */
+}
+
+/* Базовые стили для книг */
+.book {
+    position: absolute;
+    width: 80px; /* Ширина книги */
+    height: 120px; /* Высота книги */
+    opacity: 0.95;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для книги */
+    border-radius: 3px; /* Закругленные углы */
+    transform: rotate(0deg); /* Книги стоят вертикально */
+}
+
+/* Книги разных цветов и размеров */
+.book1 {
+    background: #ffe0b2; /* Цвет обложки */
+}
+
+.book2 {
+    background: #c8e6c9; /* Цвет обложки */
+}
+
+.book3 {
+    background: #bbdefb; /* Цвет обложки */
+}
+
+.book4 {
+    background: #f8bbd0; /* Цвет обложки */
+}
+
+.book5 {
+    background: #d1c4e9; /* Цвет обложки */
+}
+
+/* Корешок книги */
+.with-spine::before {
+    content: '';
+    position: absolute;
+    width: 10px; /* Ширина корешка */
+    height: 100%; /* Высота корешка */
+    background: #a0a0a0; /* Цвет корешка */
+    right: -10px; /* Смещение для корешка */
+    border-radius: 3px; /* Закругленные углы корешка */
+}
+
+/* Стиль для страниц */
+.book::before {
+    content: '';
+    position: absolute;
+    width: 10px; /* Толщина корешка */
+    height: 100%; /* Высота корешка */
+    background: #a0a0a0; /* Цвет корешка */
+    left: -10px; /* Смещение для левой стороны */
+    border-radius: 3px; /* Закругленные углы корешка */
+}
+
+.book::after {
+    content: '';
+    position: absolute;
+    width: 10px; /* Толщина страниц */
+    height: 100%; /* Высота страницы */
+    background: white; /* Цвет страниц */
+    border: 1px solid #ccc; /* Граница страниц */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Внутренняя тень */
+    border-radius: 3px; /* Закругленные углы */
+    right: -10px; /* Смещение для правой страницы */
+    background: linear-gradient(90deg, #fff 20%, #e0e0e0 20%, #e0e0e0 40%, #fff 40%, #fff 60%, #e0e0e0 60%, #e0e0e0 80%, #fff 80%); /* Полоски */
 }
